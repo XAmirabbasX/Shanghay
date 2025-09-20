@@ -17,10 +17,10 @@ class AdminController extends Controller
         return view('admin.manageAdmin');
     }
     public function showCreateAdmin(){
-        $admin = Admin::findOrFailed(auth()->id());
-        if ($admin->level == 1){
+//        $admin = Admin::find(auth()->id());
+//        if ($admin->level == 1){
             return view('admin.createAdmin');
-        }
+//        }
     }
     public function storeAdmin(AdminRequest $request){
         $insert = Admin::create([
