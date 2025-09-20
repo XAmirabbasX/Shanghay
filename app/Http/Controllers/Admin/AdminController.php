@@ -13,4 +13,7 @@ class AdminController extends Controller
     public function showManageAdmin(){
         return view('admin.manageAdmin');
     }
+    public function showCreateAdmin(){
+        return view('admin.createAdmin');
+    }
 }
