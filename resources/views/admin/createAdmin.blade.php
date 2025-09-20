@@ -98,10 +98,13 @@
                                     </div>
                                     <div class='col-lg-6'>
                                         <label>سطح دسترسی:</label>
-                                        <select class="form-control" name="parent_id">
-                                            <option selected value="1">کامل</option>
-                                            <option value="2">ناقص</option>
+                                        <select class="form-control @error('level') is-invalid @enderror' " name="level">
+                                            <option selected value="1">سوپر یوزر</option>
+                                            <option value="2">یوزر معمولی</option>
                                         </select>
+                                        @error('level')
+                                        <span class='form-text text-muted'>{{$message}}</span>
+                                        @enderror
                                     </div>
                                 </div>
                             </div>

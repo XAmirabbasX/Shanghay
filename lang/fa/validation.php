@@ -186,6 +186,7 @@ return array(
         'postCode' => 'کد پستی',
         'star' => 'امتیاز',
         'lastname' => 'نام خانوادگی',
-        'features' => 'ویژگی ها'
+        'features' => 'ویژگی ها',
+        'level' => 'سطح دسترسی'
     ),
 );

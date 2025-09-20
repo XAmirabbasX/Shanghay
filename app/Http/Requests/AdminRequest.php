@@ -28,6 +28,7 @@ class AdminRequest extends FormRequest
             'email' => 'nullable|email',
             'phone' => ['required', new MobileChars()],
             'password' => 'required|min:8',
+            'level' => 'required|in:1,2',
         ];
     }
 }
