@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\AdminRequest;
 use App\Models\Admin;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
@@ -16,14 +17,24 @@ class AdminController extends Controller
         return view('admin.manageAdmin');
     }
     public function showCreateAdmin(){
-        return view('admin.createAdmin');
+        $admin = Admin::findOrFailed(auth()->id());
+        if ($admin->level == 1){
+            return view('admin.createAdmin');
+        }
     }
     public function storeAdmin(AdminRequest $request){
-        $insert = Admin::create($request->all());
+        $insert = Admin::create([
+            'name' => $request['name'],
+            'lastname' => $request['lastname'],
+            'email' => $request['email'],
+            'phone' => $request['phone'],
+            'password' => Hash::make($request['password']),
+            'level' => $request['level'],
+        ]);
         if($insert){
-            toaster()->success('درج ادمین موفق');
+            toastr()->success('ثبت ادمین موفق');
         }else{
-            toaster()->success('درج ادمین ناموفق');
+            toastr()->error('ثبت ادمین ناموفق');
         }
         return redirect()->back();
     }

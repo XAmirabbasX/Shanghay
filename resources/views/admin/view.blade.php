@@ -1,7 +1,9 @@
 <!DOCTYPE html>
+
 <html direction="rtl" dir="rtl" style="direction: rtl">
 <!--begin::Head-->
 <head>
+    @toaster
     <base href="">
     <meta charset="utf-8"/>
     <title>مترونیک | داشبورد</title>
@@ -122,7 +124,7 @@
                     <!--begin::Menu Nav-->
                     <ul class="menu-nav ">
                         <li class="menu-item  menu-item-active" aria-haspopup="true">
-                            <a href="{{}}"  class="menu-link ">
+                            <a href="{{route('admin.index')}}"  class="menu-link ">
                                 <span
                                 class="svg-icon menu-icon"><!--begin::Svg Icon | path:assetsAdmin/media/svg/icons/desgin/Layers.svg--><svg
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
