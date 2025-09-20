@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AdminRequest;
+use DateTime;
+use DateTimeZone;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -11,7 +13,7 @@ class LoginAdminController extends Controller
 {
     public function showLoginForm(Request $request){
         if($request->secret && $request->secret == \hash('whirlpool', 'newAbrishamWay')){
-            return view('admin.login');
+            return route('admin.login');
         }else{
             return abort(404);
         }

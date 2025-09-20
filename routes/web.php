@@ -19,5 +19,6 @@ Route::prefix('admin')->middleware('auth:admins')->group(function(){
     Route::get('/showCreateAdmin', [AdminController::class, 'showCreateAdmin'])->name('admin.showCreateAdmin');
     Route::post('/storeAdmin', [AdminController::class, 'storeAdmin'])->name('admin.storeAdmin');
 });
+
 Route::get('admin/showLoginForm', [\App\Http\Controllers\Admin\LoginAdminController::class, 'showLoginForm'])->name('admin.showLoginForm');
-Route::post('admin/login', [\App\Http\Controllers\Admin\LoginAdminController::class, 'login'])->name('admin.login');
+Route::get('admin/login', [\App\Http\Controllers\Admin\LoginAdminController::class, 'login'])->name('admin.login');
