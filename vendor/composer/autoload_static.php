@@ -27,6 +27,7 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        'a032d9d0bda02e3a972af75f56d672f2' => __DIR__ . '/..' . '/laralabs/toaster/src/Helpers/functions.php',
         '476ca15b8d69b04665cd879be9cb4c68' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Collections/functions.php',
         '265b4faa2b3a9766332744949e83bf97' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Collections/helpers.php',
         'c7a3c339e7e14b60e06a2d7fcce9476b' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Events/functions.php',
@@ -131,6 +132,8 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
             'Laravel\\Sanctum\\' => 16,
             'Laravel\\Sail\\' => 13,
             'Laravel\\Prompts\\' => 16,
+            'Laralabs\\Toaster\\Tests\\' => 23,
+            'Laralabs\\Toaster\\' => 17,
         ),
         'I' => 
         array (
@@ -440,6 +443,14 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         array (
             0 => __DIR__ . '/..' . '/laravel/prompts/src',
         ),
+        'Laralabs\\Toaster\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laralabs/toaster/tests',
+        ),
+        'Laralabs\\Toaster\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laralabs/toaster/src',
+        ),
         'Illuminate\\Support\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Macroable',
@@ -538,6 +549,7 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\Admin\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -549,12 +561,17 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Requests\\AdminRequest' => __DIR__ . '/../..' . '/app/Http/Requests/AdminRequest.php',
+        'App\\Models\\Admin' => __DIR__ . '/../..' . '/app/Models/Admin.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Rules\\EnglishChars' => __DIR__ . '/../..' . '/app/Rules/EnglishChars.php',
+        'App\\Rules\\MobileChars' => __DIR__ . '/../..' . '/app/Rules/MobileChars.php',
+        'App\\Rules\\PersianChars' => __DIR__ . '/../..' . '/app/Rules/PersianChars.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
         'Brick\\Math\\BigInteger' => __DIR__ . '/..' . '/brick/math/src/BigInteger.php',
@@ -2788,6 +2805,16 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'Illuminate\\View\\ViewFinderInterface' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewFinderInterface.php',
         'Illuminate\\View\\ViewName' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewName.php',
         'Illuminate\\View\\ViewServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewServiceProvider.php',
+        'Laralabs\\Toaster\\Interfaces\\SessionStore' => __DIR__ . '/..' . '/laralabs/toaster/src/Interfaces/SessionStore.php',
+        'Laralabs\\Toaster\\Interfaces\\ViewBinder' => __DIR__ . '/..' . '/laralabs/toaster/src/Interfaces/ViewBinder.php',
+        'Laralabs\\Toaster\\LaravelSessionStore' => __DIR__ . '/..' . '/laralabs/toaster/src/LaravelSessionStore.php',
+        'Laralabs\\Toaster\\Tests\\TestCase' => __DIR__ . '/..' . '/laralabs/toaster/tests/TestCase.php',
+        'Laralabs\\Toaster\\Tests\\ToasterTest' => __DIR__ . '/..' . '/laralabs/toaster/tests/ToasterTest.php',
+        'Laralabs\\Toaster\\Toast' => __DIR__ . '/..' . '/laralabs/toaster/src/Toast.php',
+        'Laralabs\\Toaster\\Toaster' => __DIR__ . '/..' . '/laralabs/toaster/src/Toaster.php',
+        'Laralabs\\Toaster\\ToasterGroup' => __DIR__ . '/..' . '/laralabs/toaster/src/ToasterGroup.php',
+        'Laralabs\\Toaster\\ToasterServiceProvider' => __DIR__ . '/..' . '/laralabs/toaster/src/ToasterServiceProvider.php',
+        'Laralabs\\Toaster\\ToasterViewBinder' => __DIR__ . '/..' . '/laralabs/toaster/src/ToasterViewBinder.php',
         'Laravel\\Prompts\\Concerns\\Colors' => __DIR__ . '/..' . '/laravel/prompts/src/Concerns/Colors.php',
         'Laravel\\Prompts\\Concerns\\Cursor' => __DIR__ . '/..' . '/laravel/prompts/src/Concerns/Cursor.php',
         'Laravel\\Prompts\\Concerns\\Erase' => __DIR__ . '/..' . '/laravel/prompts/src/Concerns/Erase.php',

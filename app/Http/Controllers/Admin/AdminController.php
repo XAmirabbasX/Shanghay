@@ -19,6 +19,12 @@ class AdminController extends Controller
         return view('admin.createAdmin');
     }
     public function storeAdmin(AdminRequest $request){
-        Admin::create();
+        $insert = Admin::create($request->all());
+        if($insert){
+            toaster()->success('درج ادمین موفق');
+        }else{
+            toaster()->success('درج ادمین ناموفق');
+        }
+        return redirect()->back();
     }
 }

@@ -122,7 +122,7 @@
                     <!--begin::Menu Nav-->
                     <ul class="menu-nav ">
                         <li class="menu-item  menu-item-active" aria-haspopup="true">
-                            <a href="index.html"  class="menu-link ">
+                            <a href="{{}}"  class="menu-link ">
                                 <span
                                 class="svg-icon menu-icon"><!--begin::Svg Icon | path:assetsAdmin/media/svg/icons/desgin/Layers.svg--><svg
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
