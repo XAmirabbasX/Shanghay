@@ -18,6 +18,7 @@ class AdminController extends Controller
         return view('admin.createAdmin');
     }
     public function storeAdmin(AdminRequest $request){
+        dd($request);
         return view('admin.createAdmin');
     }
 }
