@@ -10,7 +10,7 @@ class AdminController extends Controller
     public function index(){
         return view('admin.index');
     }
-    public function showCreateAdmin(){
-        return view('admin.createAdmin');
+    public function showManageAdmin(){
+        return view('admin.manageAdmin');
     }
 }

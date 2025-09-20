@@ -16,5 +16,5 @@ use Illuminate\Support\Facades\Route;
 //->middleware('auth:admins')
 Route::prefix('admin')->group(function(){
     Route::get('/', [AdminController::class, 'index'])->name('admin.index');
-    Route::get('/createAdmin', [AdminController::class, 'createAdmin'])->name('admin.createAdmin');
+    Route::get('/showManageAdmin', [AdminController::class, 'showManageAdmin'])->name('admin.showManageAdmin');
 });
