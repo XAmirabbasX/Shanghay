@@ -13,7 +13,7 @@ class LoginAdminController extends Controller
 {
     public function showLoginForm(Request $request){
         if($request->secret && $request->secret == \hash('whirlpool', 'newAbrishamWay')){
-            return route('admin.login');
+            return view('admin.login');
         }else{
             return abort(404);
         }
