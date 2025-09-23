@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class OrderController extends Controller
 {
     public function index(){
-        $orders = Order::with('user')->all();
+        $orders = Order::whereNull('deleted_at')->with('user')->get();
         return view('admin.manageOrder', compact('orders'));
     }
 }

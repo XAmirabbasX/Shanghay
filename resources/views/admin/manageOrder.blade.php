@@ -76,7 +76,8 @@
                                 <tr>
                                     <td>{{$key+1}}</td>
                                     <td>{{$order->user->name}}</td>
-                                    <td>{{$order->user->name}}</td>
+                                    <td>{{$order->user->phone}}</td>
+                                    <td>{{$order->user->email}}</td>
                                     <td>
                                         {{statusFormater($order->status)}}
                                     </td>
