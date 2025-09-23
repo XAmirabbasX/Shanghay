@@ -1221,7 +1221,7 @@
                 <div class=" container-fluid  d-flex flex-column flex-md-row align-items-center justify-content-between">
                     <!--begin::کپی رایت-->
                     <div class="text-dark order-2 order-md-1">
-                        <span class="text-muted font-weight-bold mr-2">2022&copy;</span>
+                        <span class="text-muted font-weight-bold mr-2">2025&copy;</span>
                         <a href="http://keenthemes.com/metronic" target="_blank"
                            class="text-dark-75 text-hover-primary">تیم برنامه نویسی راه ابریشم نو</a>
                     </div>
