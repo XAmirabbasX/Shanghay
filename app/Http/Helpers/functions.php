@@ -14,12 +14,12 @@ function generateTrackingCode($lentgh = 15) {
 function statusFormater($status) {
     switch ($status) {
         case 'registered':
-            return 'registered';
+            return 'ارسال شده';
             break;
         case 'waiting':
-            return 'waiting';
+            return 'در انتظار';
             break;
         case 'checked':
-            return 'checked';
+            return 'بررسی شده';
     }
 }
