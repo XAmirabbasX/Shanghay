@@ -16,6 +16,6 @@ class OrderController extends Controller
         //
     }
     public function details(Request $request){
-        //
+        return view('admin.OrderDetails');
     }
 }
