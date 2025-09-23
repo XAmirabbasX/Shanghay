@@ -12,4 +12,10 @@ class OrderController extends Controller
         $orders = Order::whereNull('deleted_at')->with('user')->get();
         return view('admin.manageOrder', compact('orders'));
     }
+    public function delete(string $id){
+        //
+    }
+    public function details(Request $request){
+        //
+    }
 }
