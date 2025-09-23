@@ -11,43 +11,15 @@ function generateTrackingCode($lentgh = 15) {
     return $text2;
 }
 
-function addToCartWhenLogin(){
-    $userCart = Cart::where('user_id', auth()->id())->get();
-    $sessionCart = session('cartid') ? \Cart::session(session('cartid'))->getContent() : null;
-    if ($sessionCart != null) {
-        $hasrun = false;
-        foreach ($sessionCart as $item) {
-            foreach ($userCart as $productCart) {
-                if ($productCart->product_id == $item->id) {
-                    $productCart->quantity += $item->quantity;
-                    $productCart->save();
-                    $hasrun = true;
-                }
-            }
-
-            if (!$hasrun) {
-                Cart::create([
-                    'product_id' => $item->id,
-                    'quantity' => $item->quantity,
-                    'user_id' => auth()->id(),
-                ]);
-            }
-        }
-
-        session()->forget('cartid');
-    }
-}
-function checkCart() {
-    if(!auth()->id()){
-        toastr()->warning('You must be logged in!');
-        return redirect()->route('index');
-    }
-    if (empty(Cart::where('user_id', auth()->id())->get())) {
-        toastr()->warning('Your cart is empty!');
-        return redirect()->route('index');
-    }
-    if (empty(\App\Models\Addresses::where('user_id', auth()->id())->where('is_default', 1)->first())) {
-        toastr()->warning('آدرسی برای ارسال ندارید!');
-        return redirect()->route('index');
+function statusFormater($status) {
+    switch ($status) {
+        case 'registered':
+            return 'registered';
+            break;
+        case 'waiting':
+            return 'waiting';
+            break;
+        case 'checked':
+            return 'checked';
     }
 }
