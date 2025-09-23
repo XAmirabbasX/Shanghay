@@ -75,7 +75,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     @enderror
 								</div>
 								<div class="form-group text-center mt-10">
-									<button type="submit" id="kt_login_signin_submit" class="btn btn-pill btn-primary opacity-90 px-15 py-3">ورود</button>
+									<button type="submit" class="btn btn-pill btn-primary opacity-90 px-15 py-3">ورود</button>
 								</div>
 							</form>
 						</div>
@@ -84,7 +84,6 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="login-signup">
 							<div class="mb-20">
 								<h3 class="opacity-40 font-weight-normal">Sign Up</h3>
-								<p class="opacity-40">Enter your details to create your account</p>
 							</div>
 							<form class="form text-center" id="kt_login_signup_form">
 								<div class="form-group">

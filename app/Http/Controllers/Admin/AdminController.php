@@ -14,13 +14,16 @@ class AdminController extends Controller
         return view('admin.index');
     }
     public function showManageAdmin(){
-        return view('admin.manageAdmin');
+        $admins = Admin::all();
+        return view('admin.manageAdmin', compact('admins'));
     }
     public function showCreateAdmin(){
-//        $admin = Admin::find(auth()->id());
-//        if ($admin->level == 1){
+        $admin = Admin::find(auth()->id());
+        if ($admin->level == 1){
             return view('admin.createAdmin');
-//        }
+        }else{
+            return view('admin.dontHaveAccess');
+        }
     }
     public function storeAdmin(AdminRequest $request){
         $insert = Admin::create([

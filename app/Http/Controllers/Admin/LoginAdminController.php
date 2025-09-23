@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\AdminLoginRequest;
 use App\Http\Requests\AdminRequest;
 use DateTime;
 use DateTimeZone;
@@ -18,7 +19,7 @@ class LoginAdminController extends Controller
             return abort(404);
         }
     }
-    public function login(AdminRequest $request){
+    public function login(AdminLoginRequest $request){
         $passAndEmail = $request->only(['email','password']);
         $date = new DateTime('now', new DateTimeZone('Asia/Tehran'));
 

@@ -1223,7 +1223,7 @@
                     <div class="text-dark order-2 order-md-1">
                         <span class="text-muted font-weight-bold mr-2">2022&copy;</span>
                         <a href="http://keenthemes.com/metronic" target="_blank"
-                           class="text-dark-75 text-hover-primary">فنی مهندسی و آموزشی پاسکال</a>
+                           class="text-dark-75 text-hover-primary">تیم برنامه نویسی راه ابریشم نو</a>
                     </div>
                     <!--end::کپی رایت-->
 
