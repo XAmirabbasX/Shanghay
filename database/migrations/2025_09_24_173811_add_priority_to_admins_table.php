@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('orders', function (Blueprint $table) {
-            $table->enum('priority', [0, 1])->default(0)->after('description');
+        Schema::table('admins', function (Blueprint $table) {
+            $table->bigInteger('priority')->after('status')->nullable();
         });
     }
 
@@ -21,7 +21,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('orders', function (Blueprint $table) {
+        Schema::table('admins', function (Blueprint $table) {
             //
         });
     }

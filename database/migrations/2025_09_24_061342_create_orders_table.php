@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
+            $table->bigInteger('user_id');
             $table->string('description');
             $table->enum('status', ['registered', 'waiting', 'checked'])->default('registered');
             $table->string('tracking_code');
