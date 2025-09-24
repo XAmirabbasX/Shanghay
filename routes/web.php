@@ -20,6 +20,8 @@ Route::prefix('admin')->middleware('auth:admins')->group(function(){
     Route::get('/showCreateAdmin', [AdminController::class, 'showCreateAdmin'])->name('admin.showCreateAdmin');
     Route::post('/storeAdmin', [AdminController::class, 'storeAdmin'])->name('admin.storeAdmin');
     Route::get('/showOrder', [\App\Http\Controllers\Admin\OrderController::class, 'index'])->name('admin.showOrder');
+    Route::get('/orderDelete/{id}', [\App\Http\Controllers\Admin\OrderController::class, 'delete'])->name('admin.OrderDelete');
+    Route::post('/orderDetails', [\App\Http\Controllers\Admin\OrderController::class, 'OrderDetails'])->name('admin.OrderDetails');
 });
 
 Route::get('admin/showLoginForm', [\App\Http\Controllers\Admin\LoginAdminController::class, 'showLoginForm'])->name('admin.showLoginForm');
