@@ -164,7 +164,7 @@
                                     <li class="menu-item  menu-item-parent" aria-haspopup="true"><span
                                             class="menu-link"><span class="menu-text">اپلیکیشن ها</span></span></li>
                                     <li class="menu-item " aria-haspopup="true">
-                                        <a href="" class="menu-link ">
+                                        <a href="{{route('admin.showOrder')}}" class="menu-link ">
                                             <i class="menu-bullet menu-bullet-line">
                                                 <span></span>
                                             </i>
@@ -1221,7 +1221,7 @@
                 <div class=" container-fluid  d-flex flex-column flex-md-row align-items-center justify-content-between">
                     <!--begin::کپی رایت-->
                     <div class="text-dark order-2 order-md-1">
-                        <span class="text-muted font-weight-bold mr-2">2022&copy;</span>
+                        <span class="text-muted font-weight-bold mr-2">2025&copy;</span>
                         <a href="http://keenthemes.com/metronic" target="_blank"
                            class="text-dark-75 text-hover-primary">تیم برنامه نویسی راه ابریشم نو</a>
                     </div>
