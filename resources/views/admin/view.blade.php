@@ -10,7 +10,6 @@
     <meta name="description" content="Updates and statistics"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="csrf_token" content="{{csrf_token()}}" id="csrf_token">
-
     <!--begin::Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"/>
     <!--end::Fonts-->
@@ -2588,6 +2587,7 @@
 <!--begin::Page Scripts(used by this page)-->
 <script src="{{asset('assetsAdmin/js/pages/crud/file-upload/dropzonejs.js')}}"></script>
 <script src="{{asset("assetsAdmin/js/pages/widgets.js?v=7.0.6")}}"></script>
+
 <!--end::Page Scripts-->
 <script>
     $('#description').summernote()

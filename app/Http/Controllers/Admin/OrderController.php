@@ -15,7 +15,5 @@ class OrderController extends Controller
     public function delete(string $id){
         //
     }
-    public function OrderDetails(Request $request){
-        //
     }
 }
