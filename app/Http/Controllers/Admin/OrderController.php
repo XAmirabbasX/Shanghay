@@ -15,5 +15,9 @@ class OrderController extends Controller
     public function delete(string $id){
         //
     }
+    public function details(string $id)
+    {
+        $orderInfo = Order::find($id);
+        return view('admin.orderDetails', compact('orderInfo'));
     }
 }
