@@ -17,7 +17,7 @@ class OrderController extends Controller
     }
     public function details(string $id)
     {
-        $orderInfo = Order::find($id);
+        $orderInfo = Order::with('user')->find($id);
         return view('admin.orderDetails', compact('orderInfo'));
     }
 }

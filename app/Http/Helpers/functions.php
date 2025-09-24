@@ -23,3 +23,17 @@ function statusFormater($status) {
             return 'بررسی شده';
     }
 }
+
+function characterّIndexing($text, $character = 10) {
+    $html = '';
+    $words = preg_split('/\s+/', $text, -1, PREG_SPLIT_NO_EMPTY);
+    $chunks = array_chunk($words, $character);
+    $separator = ' ';
+    $result = array_map(function($sub) use ($separator) {
+        return implode($separator, $sub);
+    }, $chunks);
+    foreach ($result as $value) {
+        $html .= '<span>' . $value . '</span>';
+    }
+    return $html;
+}
