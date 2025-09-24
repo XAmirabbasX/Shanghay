@@ -92,10 +92,9 @@
                                                         </svg><!--end::Svg Icon-->
                                                     </span>
                                                 </a>
-                                                <form class = "btn btn-icon btn-light btn-hover-primary btn-sm mx-3" action="{{route('admin.detailsOrder', $order->id)}}">
-                                                    @csrf
-                                                    <button class = "btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
-                                                        <span class="svg-icon svg-icon-primary svg-icon-2x"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\legacy\metronic\theme\html\demo1\dist/../src/media/svg/icons\Communication\Clipboard-list.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                <a href="{{route('admin.detailsOrder', $order->id)}}" class = "btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
+                                                    <span class="svg-icon svg-icon-primary svg-icon-2x"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\legacy\metronic\theme\html\demo1\dist/../src/media/svg/icons\Communication\Clipboard-list.svg-->
+                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                                                 <rect x="0" y="0" width="24" height="24"/>
                                                                 <path d="M8,3 L8,3.5 C8,4.32842712 8.67157288,5 9.5,5 L14.5,5 C15.3284271,5 16,4.32842712 16,3.5 L16,3 L18,3 C19.1045695,3 20,3.8954305 20,5 L20,21 C20,22.1045695 19.1045695,23 18,23 L6,23 C4.8954305,23 4,22.1045695 4,21 L4,5 C4,3.8954305 4.8954305,3 6,3 L8,3 Z" fill="#000000" opacity="0.3"/>
@@ -107,22 +106,19 @@
                                                                 <rect fill="#000000" opacity="0.3" x="7" y="17" width="2" height="2" rx="1"/>
                                                                 <rect fill="#000000" opacity="0.3" x="10" y="17" width="7" height="2" rx="1"/>
                                                             </g>
-                                                            </svg>
-                                                        </span>
-                                                    </button>
-                                                </form>
-                                                <form class = "btn btn-icon btn-light btn-hover-primary btn-sm mx-3" action="{{route('admin.detailsOrder', $order->id)}}">
-                                                    @csrf
-                                                    <button class = "btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
-                                                        <span class="svg-icon svg-icon-primary svg-icon-2x"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\legacy\metronic\theme\html\demo1\dist/../src/media/svg/icons\General\Fire.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                        </svg>
+                                                    </span>
+                                                </a>
+                                                <a href="{{route('admin.setPriority', $order->id)}}" class = "btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
+                                                    <span class="svg-icon svg-icon-primary svg-icon-2x"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\legacy\metronic\theme\html\demo1\dist/../src/media/svg/icons\General\Fire.svg-->
+                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                                                 <rect x="0" y="0" width="24" height="24"/>
                                                                 <path d="M14,7 C13.6666667,10.3333333 12.6666667,12.1167764 11,12.3503292 C11,12.3503292 12.5,6.5 10.5,3.5 C10.5,3.5 10.287918,6.71444735 8.14498739,10.5717225 C7.14049032,12.3798172 6,13.5986793 6,16 C6,19.428689 9.51143904,21.2006583 12.0057195,21.2006583 C14.5,21.2006583 18,20.0006172 18,15.8004732 C18,14.0733981 16.6666667,11.1399071 14,7 Z" fill="#000000"/>
                                                             </g>
-                                                            </svg><!--end::Svg Icon-->
-                                                        </span>
-                                                    </button>
-                                                </form>
+                                                        </svg><!--end::Svg Icon-->
+                                                    </span>
+                                                </a>
                                             </td>
                                         </tr>
                                 </tbody>

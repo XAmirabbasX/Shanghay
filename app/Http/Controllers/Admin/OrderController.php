@@ -20,4 +20,8 @@ class OrderController extends Controller
         $orderInfo = Order::with('user')->find($id);
         return view('admin.orderDetails', compact('orderInfo'));
     }
+    public function setPriority(string $id)
+    {
+        dd($id);
+    }
 }
