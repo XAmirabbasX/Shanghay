@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Admin;
 use App\Models\Order;
 use Illuminate\Http\Request;
 
@@ -22,6 +23,12 @@ class OrderController extends Controller
     }
     public function setPriority(string $id)
     {
-        dd($id);
+        $result = Admin::findOrFail(auth()->id())->update(['priority' => $id]);
+        if ($result) {
+            toastr()->success('با موفقیت به عنوان تحت پیگیری تنظیم شد');
+        }else{
+            toastr()->error('عملیات ناموفق');
+        }
+        return redirect()->back();
     }
 }
