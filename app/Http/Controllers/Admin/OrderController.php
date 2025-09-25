@@ -37,7 +37,7 @@ class OrderController extends Controller
         $result = Admin::findOrFail(auth()->id())->update(['priority' => null]);
         if ($result) {
             session('admin')->update(['priority' => null]);
-            toastr()->success('با موفقیت از حالت تحت اولویت در آمد');
+            toastr()->success('با موفقیت از حالت تحت پیگیری در آمد');
         }else{
             toastr()->error('عملیات نا موفق');
         }
