@@ -96,8 +96,4 @@
         </div>
         <!--end::Entry-->
     </div>
-
-
-
-
 @endsection

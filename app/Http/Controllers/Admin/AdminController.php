@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\AdminRequest;
 use App\Models\Admin;
 use App\Models\Order;
+use DateTime;
+use DateTimeZone;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -13,11 +15,12 @@ class AdminController extends Controller
 {
     public function index(){
         $admin = session('admin');
-        $priority = null;
+        $date = new DateTime('now', new DateTimeZone('Asia/Tehran'));
+        $orderInfo = null;
         if ($admin && $admin->priority != null) {
-            $priority = Order::find($admin->priority);
+            $orderInfo = Order::find($admin->priority);
         }
-        return view('admin.index', compact('priority'));
+        return view('admin.index', compact('orderInfo', 'date'));
     }
     public function showManageAdmin(){
         $admins = Admin::all();
