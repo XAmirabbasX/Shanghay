@@ -15,8 +15,11 @@ class OrderController extends Controller
         return view('admin.manageOrder', compact('orders', 'trashOrders'));
     }
     public function delete(string $id){
-        $result = Order::destroy($id);
-        if($result){
+        $order = Order::find($id);
+        if($order){
+            $order->destroy($id);
+            Admin::where('priority', $id)->update(['priority'=>null]);
+            session('admin')->priority = null;
             toastr()->success('سفارش به سطل زباله رفت');
         }else{
             toastr()->error('عملیات شکست خورد');
