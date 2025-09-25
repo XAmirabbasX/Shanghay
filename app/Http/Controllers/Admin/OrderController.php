@@ -11,7 +11,8 @@ class OrderController extends Controller
 {
     public function showOrders(){
         $orders = Order::whereNull('deleted_at')->with('user')->get();
-        return view('admin.manageOrder', compact('orders'));
+        $trashOrders = Order::onlyTrashed()->with('user')->get();
+        return view('admin.manageOrder', compact('orders', 'trashOrders'));
     }
     public function delete(string $id){
         //
