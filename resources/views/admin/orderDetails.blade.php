@@ -4,40 +4,7 @@
         <!--begin::زیر هدر-->
         <div class="subheader py-2 py-lg-4  subheader-solid " id="kt_subheader">
             <div class=" container-fluid  d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
-                <!--begin::اطلاعات-->
-                <div class="d-flex align-items-center flex-wrap mr-2">
 
-                    <!--begin::Page Title-->
-                    <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">افزودن برند</h5>
-                    <!--end::Page Title-->
-
-                    <!--begin::اقدامات-->
-                    <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
-
-
-                    <a href="#" class="btn btn-light-warning font-weight-bolder btn-sm">
-                        افزودن جدید
-                    </a>
-                    <!--end::اقدامات-->
-                </div>
-                <!--end::اطلاعات-->
-
-                <!--begin::Toolbar-->
-                <div class="d-flex align-items-center">
-                    <!--begin::اقدامات-->
-                    <a href="#" class="btn btn-clean  btn-sm font-weight-bold font-size-base mr-1">
-                        امروز
-                    </a>
-                    <a href="#" class="btn btn-clean btn-sm font-weight-bold font-size-base  mr-1">
-                        ماه
-                    </a>
-                    <a href="#" class="btn btn-clean btn-sm font-weight-bold font-size-base mr-1">
-                        سال
-                    </a>
-                    <!--end::اقدامات-->
-
-                </div>
-                <!--end::Toolbar-->
             </div>
         </div>
         <!--end::زیر هدر-->
@@ -78,11 +45,21 @@
                                         <span class="font-weight-bolder mb-2">کد رهگیری</span>
                                         <span class="opacity-70">{{$orderInfo->tracking_code}}</span>
                                     </div>
+                                    <div class="d-flex flex-column flex-root">
+                                        <span class="font-weight-bolder mb-2">شماره تلفن</span>
+                                        <span class="opacity-70">{{$orderInfo->user->phone}}</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between text-white pt-6">
+                                    <div class="d-flex flex-column flex-root">
+                                        <span class="font-weight-bolder mb-2">ایمیل</span>
+                                        <span class="opacity-70">{{$orderInfo->user->email}}</span>
+                                    </div>
                                 </div>
                                 <div class="d-flex justify-content-between text-white pt-6">
                                     <div class="d-flex flex-column flex-root">
                                         <span class="font-weight-bolder mb-2">آدرس</span>
-                                        <span class="opacity-70">{{$orderInfo->user->address}}</span>
+                                        <span class="opacity-70">{!! characterّIndexing($orderInfo->user->address, 8) !!}</span>
                                     </div>
                                 </div>
                             </div>
