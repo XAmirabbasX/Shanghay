@@ -15,7 +15,13 @@ class OrderController extends Controller
         return view('admin.manageOrder', compact('orders', 'trashOrders'));
     }
     public function delete(string $id){
-        //
+        $result = Order::destroy($id);
+        if($result){
+            toastr()->success('سفارش به سطل زباله رفت');
+        }else{
+            toastr()->error('عملیات شکست خورد');
+        }
+        return redirect()->back();
     }
     public function details(string $id)
     {
