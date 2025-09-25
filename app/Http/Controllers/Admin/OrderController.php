@@ -25,10 +25,22 @@ class OrderController extends Controller
     {
         $result = Admin::findOrFail(auth()->id())->update(['priority' => $id]);
         if ($result) {
+            session('admin')->update(['priority' => $id]);
             toastr()->success('با موفقیت به عنوان تحت پیگیری تنظیم شد');
         }else{
             toastr()->error('عملیات ناموفق');
         }
         return redirect()->back();
+    }
+    public function removePriority()
+    {
+        $result = Admin::findOrFail(auth()->id())->update(['priority' => null]);
+        if ($result) {
+            session('admin')->update(['priority' => null]);
+            toastr()->success('با موفقیت از حالت تحت اولویت در آمد');
+        }else{
+            toastr()->error('عملیات نا موفق');
+        }
+        return redirect()->route('admin.index');
     }
 }

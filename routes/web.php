@@ -23,6 +23,7 @@ Route::prefix('admin')->middleware('auth:admins')->group(function(){
     Route::get('/deleteOrder/{id}', [\App\Http\Controllers\Admin\OrderController::class, 'delete'])->name('admin.deleteOrder');
     Route::get('/detailsOrder/{id}', [\App\Http\Controllers\Admin\OrderController::class, 'details'])->name('admin.detailsOrder');
     Route::get('/setOrderPriority/{id}', [\App\Http\Controllers\Admin\OrderController::class, 'setPriority'])->name('admin.setPriority');
+    Route::get('/removeOrderPriority', [\App\Http\Controllers\Admin\OrderController::class, 'removePriority'])->name('admin.removePriority');
 });
 
 Route::get('admin/showLoginForm', [\App\Http\Controllers\Admin\LoginAdminController::class, 'showLoginForm'])->name('admin.showLoginForm');

@@ -71,7 +71,7 @@
                                 <div class="border-bottom w-100 opacity-20"></div>
                                 <div class="d-flex justify-content-between text-white pt-6">
                                     <div class="d-flex flex-column flex-root">
-                                        <span class="font-weight-bolde mb-2r">تاریخ</span>
+                                        <span class="font-weight-bolde mb-2r">تاریخ ثبت</span>
                                         <span class="opacity-70">{{$orderInfo->created_at}}</span>
                                     </div>
                                     <div class="d-flex flex-column flex-root">

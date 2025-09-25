@@ -18,8 +18,9 @@ class AdminController extends Controller
         $date = new DateTime('now', new DateTimeZone('Asia/Tehran'));
         $orderInfo = null;
         if ($admin && $admin->priority != null) {
-            $orderInfo = Order::find($admin->priority);
+            $orderInfo = Order::findOrFail($admin->priority);
         }
+
         return view('admin.index', compact('orderInfo', 'date'));
     }
     public function showManageAdmin(){
