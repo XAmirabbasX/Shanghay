@@ -50,4 +50,13 @@ class OrderController extends Controller
         }
         return redirect()->route('admin.index');
     }
+    public function restoreOrder(string $id){
+        $result = Order::onlyTrashed()->find($id)->restore();
+        if ($result) {
+            toastr()->success('با موفقیت به لیست اصلی برگشت');
+        }else{
+            toastr()->error('عملیات ناموفق');
+        }
+        return redirect()->back();
+    }
 }
