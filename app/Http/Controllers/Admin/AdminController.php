@@ -5,13 +5,19 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AdminRequest;
 use App\Models\Admin;
+use App\Models\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
     public function index(){
-        return view('admin.index');
+        $admin = session('admin');
+        $priority = null;
+        if ($admin && $admin->priority != null) {
+            $priority = Order::find($admin->priority);
+        }
+        return view('admin.index', compact('priority'));
     }
     public function showManageAdmin(){
         $admins = Admin::all();
