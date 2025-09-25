@@ -26,13 +26,11 @@ class OrderController extends Controller
         }
         return redirect()->back();
     }
-    public function details(string $id)
-    {
+    public function details(string $id){
         $orderInfo = Order::with('user')->find($id);
         return view('admin.orderDetails', compact('orderInfo'));
     }
-    public function setPriority(string $id)
-    {
+    public function setPriority(string $id){
         $result = Admin::findOrFail(auth()->id())->update(['priority' => $id]);
         if ($result) {
             session('admin')->update(['priority' => $id]);
@@ -42,8 +40,7 @@ class OrderController extends Controller
         }
         return redirect()->back();
     }
-    public function removePriority()
-    {
+    public function removePriority(){
         $result = Admin::findOrFail(auth()->id())->update(['priority' => null]);
         if ($result) {
             session('admin')->update(['priority' => null]);
