@@ -2287,38 +2287,6 @@
         responsive : true,
     })
 
-    function delete_admin() {
-        const admin_id = $(this).data('adminid')
-        const url = $(this).data('url')
-        Swal.fire({
-            title: "شما مطمئن هستید؟",
-            text: "این عملیات قابل بازگشت نیست",
-            icon: "warning",
-            showCancelButton: true,
-            cancelButtonText: 'لغو',
-            confirmButtonText: "بله, حذف کن"
-        }).then(function (result) {
-            if (result.value) {
-                $.ajax({
-                    url: url,
-                    dataType: 'json',
-                    method: 'POST',
-                    data: {
-                        admin_id
-                    }
-                })
-                Swal.fire({
-                    type: 'success',
-                    icon: 'success',
-                    text: 'ادمین مورد نظر با موفقیت حذف شد',
-                    title: 'موفقیت آمیز',
-                    confirmButtonText: 'متوجه شدم'
-                }).then(function (){
-                    location.reload()
-                })
-            }
-        });
-    }
 </script>
 </body>
 <!--end::Body-->

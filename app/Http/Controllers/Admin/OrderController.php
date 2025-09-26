@@ -9,8 +9,13 @@ use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
-    public function showOrders(){
-        $orders = Order::whereNull('deleted_at')->with('user')->get();
+    public function showOrders(Request $request){
+        $orders = null;
+        if($request->filled('search')){
+            $orders = Order::whereNull('deleted_at')->where('tracking_code', 'like', '%'.$request->search.'%')->orWhere('description', 'like', '%'.$request->search.'%')->with('user')->get();
+        }else{
+            $orders = Order::whereNull('deleted_at')->with('user')->get();
+        }
         $trashOrders = Order::onlyTrashed()->with('user')->get();
         return view('admin.manageOrder', compact('orders', 'trashOrders'));
     }
@@ -58,5 +63,10 @@ class OrderController extends Controller
             toastr()->error('عملیات ناموفق');
         }
         return redirect()->back();
+    }
+    public function searchOrders(Request $request){
+        $orders = Order::whereNull('deleted_at')->where('tracking_code', 'like', '%'.$request->search.'%')->orWhere('description', 'like', '%'.$request->search.'%')->with('user')->get();
+        $trashOrders = Order::onlyTrashed()->with('user')->get();
+        return view('admin.manageOrder', compact('orders', 'trashOrders'));
     }
 }
