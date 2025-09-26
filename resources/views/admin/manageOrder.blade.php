@@ -49,6 +49,7 @@
                                     <th>نام</th>
                                     <th>شماره تلفن</th>
                                     <th>ایمیل</th>
+                                    <th>کد رهگیری</th>
                                     <th>وضعیت</th>
                                     <th>عملیات</th>
                                 </tr>
@@ -61,6 +62,7 @@
                                             <td>{{$order->user->name}}</td>
                                             <td>{{$order->user->phone}}</td>
                                             <td>{{$order->user->email}}</td>
+                                            <td>{{$order->tracking_code}}</td>
                                             <td>
                                                 {{statusFormater($order->status)}}
                                             </td>
