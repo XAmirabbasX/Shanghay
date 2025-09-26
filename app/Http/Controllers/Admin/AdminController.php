@@ -15,13 +15,12 @@ class AdminController extends Controller
 {
     public function index(){
         $admin = session('admin');
-        $date = new DateTime('now', new DateTimeZone('Asia/Tehran'));
         $orderInfo = null;
         if ($admin && $admin->priority != null) {
             $orderInfo = Order::findOrFail($admin->priority);
         }
 
-        return view('admin.index', compact('orderInfo', 'date'));
+        return view('admin.index', compact('orderInfo'));
     }
     public function showManageAdmin(){
         $admins = Admin::all();
