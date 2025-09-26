@@ -170,17 +170,11 @@
                         @else
                             خالی است
                         @endif
-
                     </table>
                 </div>
-{{--                <div class="modal-footer">--}}
-{{--                    <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>--}}
-{{--                    <form method="post" action="{{route('category.restoreCategories')}}">--}}
-{{--                        @csrf--}}
-{{--                        @method('post')--}}
-{{--                        <button type="submit" class="btn btn-primary">بازگرداندن همه</button>--}}
-{{--                    </form>--}}
-{{--                </div>--}}
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
+                </div>
             </div>
         </div>
     </div>
