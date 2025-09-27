@@ -26,6 +26,7 @@ Route::prefix('admin')->middleware('auth:admins')->group(function(){
     Route::get('/removeOrderPriority', [\App\Http\Controllers\Admin\OrderController::class, 'removePriority'])->name('admin.removePriority');
     Route::get('/restoreOrder/{id}', [\App\Http\Controllers\Admin\OrderController::class, 'restoreOrder'])->name('admin.restoreOrder');
     Route::post('/searchOrders', [\App\Http\Controllers\Admin\OrderController::class, 'searchOrders'])->name('admin.searchOrders');
+    Route::get('/deleteWork/{id}', [AdminController::class, 'deleteWork'])->name('admin.deleteWork');
 });
 
 Route::get('admin/showLoginForm', [\App\Http\Controllers\Admin\LoginAdminController::class, 'showLoginForm'])->name('admin.showLoginForm');

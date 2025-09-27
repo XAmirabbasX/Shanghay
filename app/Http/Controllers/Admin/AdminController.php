@@ -53,4 +53,13 @@ class AdminController extends Controller
         }
         return redirect()->back();
     }
+    public function deleteWork(string $id){
+        $result = Works::destroy($id);
+        if ($result) {
+            toastr()->success('با موفقیت حذف شد');
+        }else{
+            toastr()->error('عملیات شکست خورد');
+        }
+        return redirect()->back();
+    }
 }
