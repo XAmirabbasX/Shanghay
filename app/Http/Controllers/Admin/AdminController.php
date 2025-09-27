@@ -6,10 +6,12 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\AdminRequest;
 use App\Models\Admin;
 use App\Models\Order;
+use App\Models\Works;
 use DateTime;
 use DateTimeZone;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\View;
 
 class AdminController extends Controller
 {
@@ -19,7 +21,8 @@ class AdminController extends Controller
         if ($admin && $admin->priority != null) {
             $orderInfo = Order::findOrFail($admin->priority);
         }
-
+        $works = Works::where('admin_id', auth()->id())->get();
+        View::share('works', $works);
         return view('admin.index', compact('orderInfo'));
     }
     public function showManageAdmin(){

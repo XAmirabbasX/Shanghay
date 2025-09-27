@@ -361,9 +361,11 @@
                                             <div class="scroll pr-7 mr-n7" data-scroll="true" data-height="300"
                                                  data-mobile-height="200">
                                                 <!--begin::Item-->
-                                                <div class="d-flex align-items-center mb-6">
-                                                    <!--begin::سیمبل-->
-                                                    <div class="symbol symbol-40 symbol-light-primary mr-5">
+                                                @if($works)
+                                                    @foreach($works as $work)
+                                                        <div class="d-flex align-items-center mb-6">
+                                                            <!--begin::سیمبل-->
+                                                            <div class="symbol symbol-40 symbol-light-primary mr-5">
                                                         <span class="symbol-label">
                                                             <span class="svg-icon svg-icon-lg svg-icon-primary"><!--begin::Svg Icon | path:assetsAdmin/media/svg/icons/home/کتابخانه.svg--><svg
                                                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -379,18 +381,20 @@
                                                                 </svg><!--end::Svg Icon-->
                                                             </span>
                                                         </span>
-                                                    </div>
-                                                    <!--end::سیمبل-->
+                                                            </div>
+                                                            <!--end::سیمبل-->
 
-                                                    <!--begin::متن-->
-                                                    <div class="d-flex flex-column font-weight-bold">
-                                                        <a href="#"
-                                                           class="text-dark text-hover-primary mb-1 font-size-lg">برنامه
-                                                            جالب</a>
-                                                        <span class="text-muted">کمپین های بازاریابی</span>
-                                                    </div>
-                                                    <!--end::متن-->
-                                                </div>
+                                                            <!--begin::متن-->
+                                                            <div class="d-flex flex-column font-weight-bold">
+                                                                <a href="#"
+                                                                   class="text-dark text-hover-primary mb-1 font-size-lg">{{$work->name}}</a>
+                                                                <span class="text-muted">{{$work->description}}</span>
+                                                            </div>
+                                                            <!--end::متن-->
+                                                        </div>
+                                                    @endforeach
+                                                @endif
+
                                                 <!--end::Item-->
                                             </div>
                                             <!--end::Scroll-->
